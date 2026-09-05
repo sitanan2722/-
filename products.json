@@ -1,7 +1,7 @@
 [
   {
     "id": "yuzu-s",
-    "name": "ChaJai ชาส้มยูซุ",
+    "name": "CheunJai ชาส้มยูซุ",
     "mood": "fresh",
     "size": "250ml",
     "price": 55,
@@ -10,7 +10,7 @@
   },
   {
     "id": "yuzu-l",
-    "name": "ChaJai ชาส้มยูซุ",
+    "name": "CheunJai ชาส้มยูซุ",
     "mood": "fresh",
     "size": "500ml",
     "price": 99,
@@ -19,7 +19,7 @@
   },
   {
     "id": "chamomile-lavender-s",
-    "name": "ChaJai ชาดอกคาโมมายล์ลาเวนเดอร์",
+    "name": "CheunJai ชาดอกคาโมมายล์ลาเวนเดอร์",
     "mood": "relax",
     "size": "250ml",
     "price": 55,
@@ -28,7 +28,7 @@
   },
   {
     "id": "chamomile-lavender-l",
-    "name": "ChaJai ชาดอกคาโมมายล์ลาเวนเดอร์",
+    "name": "CheunJai ชาดอกคาโมมายล์ลาเวนเดอร์",
     "mood": "relax",
     "size": "500ml",
     "price": 99,
@@ -37,7 +37,7 @@
   },
   {
     "id": "matcha-s",
-    "name": "ChaJai ชาเขียวมัทฉะเข้มข้น",
+    "name": "CheunJai ชาเขียวมัทฉะเข้มข้น",
     "mood": "focus",
     "size": "250ml",
     "price": 55,
@@ -46,7 +46,7 @@
   },
   {
     "id": "matcha-l",
-    "name": "ChaJai ชาเขียวมัทฉะเข้มข้น",
+    "name": "CheunJai ชาเขียวมัทฉะเข้มข้น",
     "mood": "focus",
     "size": "500ml",
     "price": 99,
@@ -55,7 +55,7 @@
   },
   {
     "id": "rose-berry-s",
-    "name": "ChaJai ชากุหลาบผสมมิกซ์เบอร์รี่",
+    "name": "CheunJai ชากุหลาบผสมมิกซ์เบอร์รี่",
     "mood": "sweet",
     "size": "250ml",
     "price": 55,
@@ -64,7 +64,7 @@
   },
   {
     "id": "rose-berry-l",
-    "name": "ChaJai ชากุหลาบผสมมิกซ์เบอร์รี่",
+    "name": "CheunJai ชากุหลาบผสมมิกซ์เบอร์รี่",
     "mood": "sweet",
     "size": "500ml",
     "price": 99,
