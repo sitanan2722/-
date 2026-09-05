@@ -55,7 +55,7 @@ function initProductPage() {
     })
     .catch(function (error) {
       console.error(error);
-      listEl.innerHTML = '<p>ไม่สามารถโหลดข้อมูลสินค้าได้ กรุณาลองใหม่อีกครั้ง</p>';
+      listEl.innerHTML = '<p class="empty-state">ไม่สามารถโหลดข้อมูลสินค้าได้ กรุณาลองใหม่อีกครั้ง</p>';
     });
 }
 
@@ -68,13 +68,14 @@ function renderProducts(products, mood) {
     : products.filter(function (p) { return p.mood === mood; });
 
   if (filtered.length === 0) {
-    listEl.innerHTML = '<p>ไม่พบสินค้าในหมวดนี้</p>';
+    listEl.innerHTML = '<p class="empty-state">ไม่พบสินค้าในหมวดนี้ ลองเลือกอารมณ์อื่นดูนะ</p>';
     return;
   }
 
   filtered.forEach(function (product) {
     const card = document.createElement('div');
     card.className = 'product-card';
+    card.setAttribute('data-mood', product.mood);
 
     const orderUrl = 'order.html?item=' + encodeURIComponent(product.name + ' ' + product.size)
       + '&price=' + encodeURIComponent(product.price);
