@@ -1,0 +1,497 @@
+/* =========================================================
+   ChaJai (ชาใจ) — Shared Theme
+   Premium, breathable, herbal-wellness look.
+   Base: warm off-white / cream. Accent: deep herbal mint green.
+   Mood colors are used sparingly (dots, thin borders, small
+   labels) — never as full card backgrounds.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ---- Core palette ---- */
+  --color-cream: #FAF7F0;       /* page background */
+  --color-white: #FFFFFF;       /* card / surface background */
+  --color-ink: #2B2A25;         /* primary text, warm near-black */
+  --color-ink-soft: #55534A;    /* secondary text */
+  --color-ink-faint: #8C8A7E;   /* tertiary text, placeholders */
+  --color-line: #E6E1D6;        /* hairline borders */
+  --color-mint: #2F6B57;        /* brand accent — herbal mint green */
+  --color-mint-dark: #234F41;   /* accent hover / pressed */
+  --color-mint-tint: #E7F0EA;   /* soft mint background wash */
+
+  /* ---- Mood accents (used as small touches only) ---- */
+  --mood-fresh: #E3A63F;   /* ยูซุ เหลือง-ส้มอ่อน */
+  --mood-relax: #A997CF;   /* ลาเวนเดอร์อ่อน */
+  --mood-focus: #4F7A3D;   /* มัทฉะเข้ม */
+  --mood-sweet: #DD97A4;   /* กุหลาบชมพูอ่อน */
+
+  --mood-fresh-tint: #FBF1DF;
+  --mood-relax-tint: #F1EDF9;
+  --mood-focus-tint: #EDF3E7;
+  --mood-sweet-tint: #FAECEF;
+
+  /* ---- Typography ---- */
+  --font-heading: 'Prompt', 'Noto Sans Thai', sans-serif;
+  --font-body: 'Noto Sans Thai', 'Prompt', sans-serif;
+
+  --fs-h1: clamp(2rem, 1.6rem + 1.8vw, 3.25rem);
+  --fs-h2: clamp(1.5rem, 1.3rem + 0.9vw, 2.25rem);
+  --fs-h3: clamp(1.15rem, 1.05rem + 0.4vw, 1.5rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-tiny: 0.75rem;
+
+  /* ---- Spacing scale ---- */
+  --space-2xs: 0.375rem;
+  --space-xs: 0.625rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 2.75rem;
+  --space-xl: 4.5rem;
+  --space-2xl: 7rem;
+
+  /* ---- Shape ---- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
+  --border-hairline: 1px solid var(--color-line);
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-base: 220ms;
+
+  /* ---- Layout ---- */
+  --container-max: 1120px;
+  --container-pad: 1.25rem;
+}
+
+/* =========================================================
+   Reset
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+ul, ol { padding: 0; margin: 0; list-style: none; }
+
+a { color: inherit; text-decoration: none; }
+
+button, input, textarea, select { font-family: inherit; font-size: inherit; color: inherit; }
+
+button { cursor: pointer; background: none; border: none; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 var(--space-xs);
+  color: var(--color-ink);
+}
+
+h1 { font-size: var(--fs-h1); font-weight: 700; }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); font-weight: 500; }
+
+p { margin: 0 0 var(--space-sm); color: var(--color-ink-soft); }
+
+p:last-child { margin-bottom: 0; }
+
+/* Visible focus state for keyboard users */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-mint);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================
+   Layout helpers
+   ========================================================= */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.section {
+  padding-block: var(--space-xl);
+}
+
+.section--tight { padding-block: var(--space-lg); }
+
+.stack { display: flex; flex-direction: column; }
+
+.center-text { text-align: center; }
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--color-mint);
+  margin-bottom: var(--space-2xs);
+}
+
+.section-intro {
+  max-width: 620px;
+  margin-bottom: var(--space-lg);
+}
+
+.section-intro p {
+  font-size: 1.0625rem;
+}
+
+/* Thin decorative rule, used under section headings instead of a
+   heavy background block — keeps things quiet and specific. */
+.rule-accent {
+  width: 44px;
+  height: 3px;
+  border-radius: var(--radius-pill);
+  background: var(--color-mint);
+  margin-block: var(--space-xs) var(--space-sm);
+}
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xs);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  transition: background-color var(--dur-fast) var(--ease-standard),
+              border-color var(--dur-fast) var(--ease-standard),
+              color var(--dur-fast) var(--ease-standard);
+}
+
+.btn-primary {
+  background: var(--color-mint);
+  color: var(--color-white);
+  border: 1px solid var(--color-mint);
+}
+
+.btn-primary:hover { background: var(--color-mint-dark); border-color: var(--color-mint-dark); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-line);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-mint);
+  color: var(--color-mint);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-mint);
+  border: 1px solid transparent;
+  padding-inline: 0.25rem;
+}
+
+.btn-ghost:hover { color: var(--color-mint-dark); }
+
+.btn-block { width: 100%; }
+
+/* =========================================================
+   Cards
+   ========================================================= */
+.card {
+  background: var(--color-white);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm);
+  transition: border-color var(--dur-base) var(--ease-standard),
+              transform var(--dur-base) var(--ease-standard);
+}
+
+.card:hover {
+  border-color: var(--color-mint);
+  transform: translateY(-2px);
+}
+
+/* Product card: a thin top border in the mood color is the only
+   full-width mood treatment — everything else stays neutral. */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+  border-top: 3px solid var(--mood-accent, var(--color-line));
+}
+
+.product-card__media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-mint-tint);
+}
+
+.product-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card__body {
+  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.product-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.product-card__size {
+  font-size: var(--fs-small);
+  color: var(--color-ink-faint);
+}
+
+.product-card__desc {
+  font-size: var(--fs-small);
+  color: var(--color-ink-soft);
+  margin: var(--space-2xs) 0 var(--space-xs);
+}
+
+.product-card__footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-top: var(--space-xs);
+}
+
+.product-card__price {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--color-ink);
+}
+
+.product-card__price small {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--fs-tiny);
+  color: var(--color-ink-faint);
+  margin-left: 2px;
+}
+
+/* =========================================================
+   Mood tags — a colored dot + label, or a hairline chip.
+   Backgrounds stay tinted and light, never the saturated hue.
+   ========================================================= */
+.mood-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-tiny);
+  font-weight: 500;
+  color: var(--color-ink-soft);
+  padding: 3px 10px 3px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-cream);
+  border: var(--border-hairline);
+}
+
+.mood-tag::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--mood-accent, var(--color-mint));
+  flex-shrink: 0;
+}
+
+.mood-fresh { --mood-accent: var(--mood-fresh); }
+.mood-relax { --mood-accent: var(--mood-relax); }
+.mood-focus { --mood-accent: var(--mood-focus); }
+.mood-sweet { --mood-accent: var(--mood-sweet); }
+
+.mood-fresh.mood-tag { background: var(--mood-fresh-tint); }
+.mood-relax.mood-tag { background: var(--mood-relax-tint); }
+.mood-focus.mood-tag { background: var(--mood-focus-tint); }
+.mood-sweet.mood-tag { background: var(--mood-sweet-tint); }
+
+/* Mood filter pills (e.g. for a product-filter bar) reuse the
+   same token via data attribute so JS can set one class. */
+[data-mood="fresh"] { --mood-accent: var(--mood-fresh); }
+[data-mood="relax"] { --mood-accent: var(--mood-relax); }
+[data-mood="focus"] { --mood-accent: var(--mood-focus); }
+[data-mood="sweet"] { --mood-accent: var(--mood-sweet); }
+
+/* =========================================================
+   Grid
+   ========================================================= */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 560px) {
+  .grid--products { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .grid--products { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1180px) {
+  .grid--products { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* =========================================================
+   Header / Nav (shell — pages fill in content)
+   ========================================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(250, 247, 240, 0.92);
+  backdrop-filter: saturate(140%) blur(6px);
+  border-bottom: var(--border-hairline);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-xs);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-ink);
+}
+
+.brand span {
+  color: var(--color-mint);
+}
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: var(--fs-small);
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .nav-links { display: flex; }
+}
+
+.nav-links a { color: var(--color-ink-soft); transition: color var(--dur-fast); }
+.nav-links a:hover { color: var(--color-mint); }
+
+/* =========================================================
+   Hero (shell)
+   ========================================================= */
+.hero {
+  padding-block: var(--space-xl) var(--space-lg);
+}
+
+.hero__grid {
+  display: grid;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .hero__grid { grid-template-columns: 1.1fr 0.9fr; }
+}
+
+.hero h1 { margin-bottom: var(--space-sm); }
+
+.hero__lede {
+  font-size: 1.0625rem;
+  max-width: 46ch;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.hero__media {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-mint-tint);
+  aspect-ratio: 4 / 3;
+}
+
+.hero__media img { width: 100%; height: 100%; object-fit: cover; }
+
+/* =========================================================
+   Footer (shell)
+   ========================================================= */
+.site-footer {
+  border-top: var(--border-hairline);
+  padding-block: var(--space-lg);
+  color: var(--color-ink-faint);
+  font-size: var(--fs-small);
+}
+
+.site-footer a:hover { color: var(--color-mint); }
+
+/* =========================================================
+   Utility
+   ========================================================= */
+.text-muted { color: var(--color-ink-faint); }
+.text-mint { color: var(--color-mint); }
+.mt-0 { margin-top: 0; }
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}

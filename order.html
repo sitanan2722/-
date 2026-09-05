@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ยืนยันการสั่งซื้อ — ChaJai ชาใจ</title>
+  <meta name="description" content="กรอกข้อมูลเพื่อยืนยันการสั่งซื้อชาพรีเมียม ChaJai ชาใจ">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand">Cha<span>Jai</span></a>
+      <nav class="nav-links" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้าทั้งหมด</a>
+      </nav>
+      <a href="product.html" class="btn btn-secondary">ดูสินค้า</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+
+        <div class="section-intro">
+          <span class="eyebrow">ขั้นตอนสุดท้าย</span>
+          <h1>ยืนยันการสั่งซื้อ</h1>
+          <div class="rule-accent"></div>
+          <p>กรอกข้อมูลให้ครบ แล้วกด "ยืนยันสั่งซื้อ" ทีมงานจะติดต่อกลับเพื่อนัดส่งชาใจให้คุณ</p>
+        </div>
+
+        <form id="orderForm" class="form" novalidate>
+
+          <div class="form-field">
+            <label for="customerName">ชื่อลูกค้า</label>
+            <input type="text" id="customerName" name="customerName" placeholder="ชื่อ-นามสกุล หรือชื่อเล่น" required>
+          </div>
+
+          <div class="form-field">
+            <label for="contact">เบอร์โทร / Line</label>
+            <input type="text" id="contact" name="contact" placeholder="เบอร์โทรศัพท์ หรือ Line ID" required>
+          </div>
+
+          <div class="form-field">
+            <label for="items">รายการสินค้า</label>
+            <input type="text" id="items" name="items" readonly>
+            <span class="hint">ระบบเติมให้อัตโนมัติจากสินค้าที่คุณเลือก</span>
+          </div>
+
+          <div class="form-field">
+            <label for="total">จำนวนเงินรวม (บาท)</label>
+            <input type="text" id="total" name="total" readonly>
+            <span class="hint">ระบบคำนวณให้อัตโนมัติ ไม่ต้องกรอกเอง</span>
+          </div>
+
+          <div class="form-field">
+            <label for="note">หมายเหตุ</label>
+            <textarea id="note" name="note" placeholder="เช่น ที่อยู่จัดส่ง เวลาที่สะดวก หรือความต้องการเพิ่มเติม (ถ้ามี)"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-block">ยืนยันสั่งซื้อ</button>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 ChaJai (ชาใจ) — ชาพรีเมียมเพื่อทุกมู้ดของคุณ</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

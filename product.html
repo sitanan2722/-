@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สินค้าทั้งหมด — ChaJai ชาใจ</title>
+  <meta name="description" content="เลือกซื้อชาพรีเมียม ChaJai ชาใจ ครบทั้ง 4 สูตร Fresh, Relax, Focus, Sweet ทั้งไซส์เล็กและใหญ่">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand">Cha<span>Jai</span></a>
+      <nav class="nav-links" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้าทั้งหมด</a>
+      </nav>
+      <a href="product.html" class="btn btn-secondary">ดูสินค้า</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+
+        <div class="section-intro">
+          <span class="eyebrow">เมนูของเรา</span>
+          <h1>สินค้าทั้งหมด</h1>
+          <div class="rule-accent"></div>
+          <p>เลือกชาใจตามมู้ดที่ใช่สำหรับวันนี้ หรือดูสินค้าทั้งหมดได้เลย</p>
+        </div>
+
+        <div id="filter-bar" style="display:flex;flex-wrap:wrap;gap:var(--space-xs);margin-bottom:var(--space-lg);"></div>
+
+        <div id="product-list" class="grid grid--products"></div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 ChaJai (ชาใจ) — ชาพรีเมียมเพื่อทุกมู้ดของคุณ</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

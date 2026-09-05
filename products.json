@@ -1,0 +1,74 @@
+[
+  {
+    "id": "yuzu-s",
+    "name": "ChaJai ชาส้มยูซุ",
+    "mood": "fresh",
+    "size": "250ml",
+    "price": 55,
+    "image": "images/fresh.jpg",
+    "description": "ชงจากส้มยูซุแท้ กลิ่นหอมสดชื่น รสเปรี้ยวหวานละมุน ดื่มแล้วรู้สึกกระปรี้กระเปร่าได้ทันที"
+  },
+  {
+    "id": "yuzu-l",
+    "name": "ChaJai ชาส้มยูซุ",
+    "mood": "fresh",
+    "size": "500ml",
+    "price": 99,
+    "image": "images/fresh.jpg",
+    "description": "ชงจากส้มยูซุแท้ กลิ่นหอมสดชื่น รสเปรี้ยวหวานละมุน ดื่มแล้วรู้สึกกระปรี้กระเปร่าได้ทันที"
+  },
+  {
+    "id": "chamomile-lavender-s",
+    "name": "ChaJai ชาดอกคาโมมายล์ลาเวนเดอร์",
+    "mood": "relax",
+    "size": "250ml",
+    "price": 55,
+    "image": "images/relax.jpg",
+    "description": "ผสมดอกคาโมมายล์และลาเวนเดอร์แท้ กลิ่นหอมอ่อนๆ ช่วยให้รู้สึกผ่อนคลายหลังวันที่เหนื่อยล้า"
+  },
+  {
+    "id": "chamomile-lavender-l",
+    "name": "ChaJai ชาดอกคาโมมายล์ลาเวนเดอร์",
+    "mood": "relax",
+    "size": "500ml",
+    "price": 99,
+    "image": "images/relax.jpg",
+    "description": "ผสมดอกคาโมมายล์และลาเวนเดอร์แท้ กลิ่นหอมอ่อนๆ ช่วยให้รู้สึกผ่อนคลายหลังวันที่เหนื่อยล้า"
+  },
+  {
+    "id": "matcha-s",
+    "name": "ChaJai ชาเขียวมัทฉะเข้มข้น",
+    "mood": "focus",
+    "size": "250ml",
+    "price": 55,
+    "image": "images/focus.jpg",
+    "description": "ชงจากมัทฉะเกรดพรีเมียม รสเข้มข้นกลมกล่อม ให้พลังงานและความตื่นตัวแบบไม่ใจสั่น"
+  },
+  {
+    "id": "matcha-l",
+    "name": "ChaJai ชาเขียวมัทฉะเข้มข้น",
+    "mood": "focus",
+    "size": "500ml",
+    "price": 99,
+    "image": "images/focus.jpg",
+    "description": "ชงจากมัทฉะเกรดพรีเมียม รสเข้มข้นกลมกล่อม ให้พลังงานและความตื่นตัวแบบไม่ใจสั่น"
+  },
+  {
+    "id": "rose-berry-s",
+    "name": "ChaJai ชากุหลาบผสมมิกซ์เบอร์รี่",
+    "mood": "sweet",
+    "size": "250ml",
+    "price": 55,
+    "image": "images/sweet.jpg",
+    "description": "ผสมกลีบกุหลาบและมิกซ์เบอร์รี่ รสหวานละมุนติดเปรี้ยวเล็กน้อย ดื่มง่ายทุกวัย"
+  },
+  {
+    "id": "rose-berry-l",
+    "name": "ChaJai ชากุหลาบผสมมิกซ์เบอร์รี่",
+    "mood": "sweet",
+    "size": "500ml",
+    "price": 99,
+    "image": "images/sweet.jpg",
+    "description": "ผสมกลีบกุหลาบและมิกซ์เบอร์รี่ รสหวานละมุนติดเปรี้ยวเล็กน้อย ดื่มง่ายทุกวัย"
+  }
+]
