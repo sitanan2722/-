@@ -190,8 +190,18 @@
       const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
       if (submitBtn) submitBtn.disabled = true;
 
+      // Google Apps Script web apps don't return CORS headers that the
+      // browser will accept, so a normal fetch() rejects here even when
+      // the order was saved successfully on the Sheet side. mode: 'no-cors'
+      // sends the request without trying to read/validate the response
+      // (we don't need the response body anyway), so it resolves instead
+      // of throwing and we can safely move on to the thank-you page.
       fetch(ORDER_SUBMIT_URL, {
         method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
         body: JSON.stringify(payload),
       })
         .then(() => {
